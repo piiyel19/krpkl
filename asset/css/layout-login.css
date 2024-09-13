@@ -1,0 +1,24 @@
+body, html {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        font-family: Arial, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #f5f5f5;
+}
+
+
+
+div.swal2-icon.swal2-error.swal-custom-icon.swal2-icon-show{
+	font-size: 10px;
+}
+
+#swal2-title{
+	font-size: 18px;
+}
+
+#swal2-html-container{
+	font-size: 16px;
+}

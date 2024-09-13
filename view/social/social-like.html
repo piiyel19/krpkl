@@ -1,0 +1,81 @@
+<link rel="stylesheet" type="text/css" href="asset/css/layout-social.css">
+
+<div class="header">
+    KRPKL 
+    <div class="notification">
+        <i class="fa fa-exchange" onclick="webRoute('club-menu');"></i> <!-- FontAwesome ellipsis (three dots) icon -->
+    </div>
+</div>
+
+<div class="content">
+    <!-- Tabs for My Post Likes and Users Who Liked My Post -->
+    <div class="tabs">
+        <div class="tab active" id="myPostLikesTab">My Post </div>
+        <div class="tab" id="usersLikeMyPostTab">Who Liked </div>
+    </div>
+
+    <!-- User List -->
+    <div id="myPostLikes" class="user-list">
+        <div class="user-item">
+            <div class="user-avatar"></div>
+            <div class="user-details">
+                <div class="user-name">John Doe</div>
+                <div class="user-status">Feeling happy today!</div>
+                <div class="user-date">2024-08-30</div>
+            </div>
+        </div>
+
+        <!-- Add more user items as needed -->
+    </div>
+
+    <div id="usersLikeMyPost" class="user-list" style="display: none;">
+        <div class="user-item">
+            <div class="user-avatar"></div>
+            <div class="user-details">
+                <div class="user-name">Jane Smith</div>
+                <div class="user-status">Excited for the weekend!</div>
+                <div class="user-date">2024-08-29</div>
+            </div>
+        </div>
+
+        <!-- Add more user items as needed -->
+    </div>
+</div>
+
+
+<!-- Modal Background -->
+<div class="modal-background" id="modalBackground"></div>
+
+<!-- Modal for Creating a Post -->
+<div class="modal" id="createPostModal" >
+    <div style="margin: 20px;">
+        <span class="close-modal-button" id="closeModalButton">&times;</span>
+        <h3>Create a Post</h3>
+        <textarea placeholder="Write something..." rows="4"></textarea>
+
+        <div class="image-upload" id="modalImageUpload">
+            <label for="modalImageInput">
+                <i class="fas fa-camera"></i>
+                <input type="file" id="modalImageInput" accept="image/*" multiple>
+            </label>
+        </div>
+
+        <div class="form-buttons">
+            <button type="button" class="cancel-button fullBtn" id="cancelModalButton">Cancel</button>
+            <button type="submit" class="fullBtn">Post</button>
+        </div>
+    </div>
+</div>
+
+<div class="menu-bottom">
+    <a  onclick="webRoute('social-home');"><i class="fas fa-home"></i></a>
+    <a  onclick="webRoute('social-search');"><i class="fas fa-search"></i></a>
+    <a  id="plusButton"><i class="fas fa-plus"></i></a>
+    <a  onclick="webRoute('social-like');"><i class="fas fa-heart"></i></a>
+    <a  onclick="webRoute('social-profile');"><i class="fas fa-user"></i></a>
+</div>
+
+
+
+<script type="text/javascript" src="asset/js/social-upload.js"></script>
+<script type="text/javascript" src="asset/js/social-like.js"></script>

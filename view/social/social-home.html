@@ -1,0 +1,83 @@
+<link rel="stylesheet" type="text/css" href="asset/css/layout-social.css">
+<div class="header">
+    KRPKL 
+    <div class="notification">
+        <i class="fa fa-bell" onclick="notification();"></i> <!-- FontAwesome bell icon -->
+        
+
+        &nbsp;
+        <i class="fa fa-exchange" onclick="webRoute('club-menu');"></i> <!-- FontAwesome ellipsis (three dots) icon -->
+    </div>
+</div>
+
+<div id="content_posts">
+    
+</div>
+
+<!-- Modal Background -->
+<div class="modal-background" id="modalBackground"></div>
+
+<!-- Modal for Creating a Post -->
+<div class="modal" id="createPostModal" >
+    <div style="margin: 20px;">
+        <form id="createPostForm" enctype="multipart/form-data">
+            <span class="close-modal-button" id="closeModalButton">&times;</span>
+            <h3>Create a Post</h3>
+            <textarea name="content" placeholder="Write something..." rows="4"></textarea>
+
+            <div class="image-upload" id="modalImageUpload">
+                <label for="modalImageInput">
+                    <i class="fas fa-camera"></i>
+                    <input name="images[]" type="file" id="modalImageInput" accept="image/*" multiple>
+                </label>
+            </div>
+
+            <div class="form-buttons">
+                <button type="button" class="cancel-button fullBtn" id="cancelModalButton">Cancel</button>
+                <button type="submit" class="fullBtn">Post</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+
+<div class="modal" id="whoLikePostModal" >
+    <div style="margin: 20px; padding-bottom: 12px;">
+        <span class="close-modal-button" onclick="close_who_like_post();">&times;</span>
+        <h3>Who like this post</h3>
+
+    </div>
+    <div id="myPostLikes" class="user-list">
+
+    </div>
+</div>
+
+
+<!-- Confirmation Prompt Modal -->
+<div class="modal-confirmation" id="confirmationModal_post">
+    <p>Are you sure to delete ?</p>
+    <div class="confirm-buttons">
+        <input type="hidden" name="id_delete" value="">
+        <input type="hidden" name="id_post" value="">
+        
+        <button class="cancel-button" id="confirmNoButton_post">Cancel</button>
+        <button class="yes-button" id="confirmYesButton_post">Yes</button>
+    </div>
+</div>
+
+<div class="menu-bottom">
+    <a  onclick="webRoute('social-home');"><i class="fas fa-home"></i></a>
+    <a  onclick="webRoute('social-search');"><i class="fas fa-search"></i></a>
+    <a  id="plusButton"><i class="fas fa-plus"></i></a>
+    <a  onclick="webRoute('social-like');"><i class="fas fa-heart"></i></a>
+    <a  onclick="webRoute('social-profile');"><i class="fas fa-user"></i></a>
+</div>
+
+
+
+
+
+
+<script type="text/javascript" src="asset/js/social-home.js"></script>
+<script type="text/javascript" src="asset/js/social-upload.js"></script>
+<!-- <script type="text/javascript" src="asset/js/social-post.js" defer></script> -->

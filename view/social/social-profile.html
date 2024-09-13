@@ -1,0 +1,136 @@
+<link rel="stylesheet" type="text/css" href="asset/css/layout-social.css">
+
+<div class="header">
+    KRPKL 
+    <div class="notification">
+        <i class="fa fa-exchange" onclick="webRoute('club-menu');"></i> <!-- FontAwesome ellipsis (three dots) icon -->
+    </div>
+</div>
+
+<div class="content" style="padding-bottom: 100px;">
+    <!-- Profile Header -->
+    <div class="profile-header">
+        <img id="profileImage" src="https://via.placeholder.com/100" alt="Profile Picture" onclick="triggerImageUpload();">
+        <input type="file" id="imageInput" accept="image/*" style="display: none;" onchange="updateProfileImage(event);">
+        <div class="username" id="userName">John Doe</div>
+        <div class="bio" id="userBio">This is my bio. I love coding and designing web pages!</div>
+        <div class="follow-info">
+            <div>
+                <span id="totalPost">0</span>
+                <small>Posts</small>
+            </div>
+            <div>
+                <span id="followersCount">0</span>
+                <small>Followers</small>
+            </div>
+            <div>
+                <span id="followingCount">0</span>
+                <small>Following</small>
+            </div>
+        </div>
+        <div class="profile-actions">
+            <button id="editProfileButton">Edit Profile</button>
+            <button class="share" id="editPasswordButton">Change Password</button>
+        </div>
+    </div>
+
+    <!-- Grid Layout for Posts -->
+    <div style="padding-left: 10px; padding-right: 10px; border-radius: 25px; border: 1px solid #b4b4b4; display: none; width: 95%;" id="tabAll">
+        <!-- make 2 section post text | post image make tab --> 
+        <div class="tabs">
+            <button class="tab-button active" id="tabText" onclick="openTab('textPosts')">Text Posts</button>
+            <button class="tab-button" id="tabImg" onclick="openTab('imagePosts')">Image Posts</button>
+        </div>
+        <hr>
+
+        <!-- Tab Content for Text Posts -->
+        <div id="textPosts" class="tab-content active">
+            <div class="" id="displayText">
+                
+            </div>
+        </div>
+
+        <!-- Tab Content for Image Posts -->
+        <div id="imagePosts" class="tab-content">
+            <div class="profile-posts" id="displayImg">
+                
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Modal Background -->
+<div class="modal-background" id="modalBackground"></div>
+
+<!-- Modal for Creating a Post -->
+<div class="modal" id="createPostModal" >
+    <div style="margin: 20px;">
+        <form id="createPostForm" enctype="multipart/form-data">
+            <span class="close-modal-button" id="closeModalButton">&times;</span>
+            <h3>Create a Post</h3>
+            <textarea name="content" placeholder="Write something..." rows="4"></textarea>
+
+            <div class="image-upload" id="modalImageUpload">
+                <label for="modalImageInput">
+                    <i class="fas fa-camera"></i>
+                    <input name="images[]" type="file" id="modalImageInput" accept="image/*" multiple>
+                </label>
+            </div>
+
+            <div class="form-buttons">
+                <button type="button" class="cancel-button fullBtn" id="cancelModalButton">Cancel</button>
+                <button type="submit" class="fullBtn">Post</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+
+
+<div class="modal" id="editProfileModal" >
+    <div style="margin: 20px;">
+        <span class="close-modal-button" id="closeModalButton_profile">&times;</span>
+        <h3>Edit Profile</h3>
+
+        <input type="text" id="userName_update" name="" placeholder="Fullname">
+        <br><br>
+        <textarea id="userBio_update" placeholder="Write something..." rows="4"></textarea>
+
+
+        <div class="form-buttons">
+            <button type="button" class="cancel-button fullBtn" id="cancelModalButton_profile">Cancel</button>
+            <button type="submit" class="fullBtn" id="saveEditButton">Save</button>
+        </div>
+    </div>
+</div>
+
+
+
+<div class="modal" id="editPasswordModal" >
+    <div style="margin: 20px;">
+        <span class="close-modal-button" id="closeModalButton_password">&times;</span>
+        <h3>Change Password</h3>
+
+        <input type="text" name="" placeholder="New Password">
+
+
+        <div class="form-buttons">
+            <button type="button" class="cancel-button fullBtn" id="cancelModalButton_password">Cancel</button>
+            <button type="submit" class="fullBtn">Post</button>
+        </div>
+    </div>
+</div>
+
+<div class="menu-bottom">
+    <a  onclick="webRoute('social-home');"><i class="fas fa-home"></i></a>
+    <a  onclick="webRoute('social-search');"><i class="fas fa-search"></i></a>
+    <a  id="plusButton"><i class="fas fa-plus"></i></a>
+    <a  onclick="webRoute('social-like');"><i class="fas fa-heart"></i></a>
+    <a  onclick="webRoute('social-profile');"><i class="fas fa-user"></i></a>
+</div>
+
+
+
+<script type="text/javascript" src="asset/js/social-upload-profile.js"></script>
+<script type="text/javascript" src="asset/js/social-profile.js"></script>

@@ -1,0 +1,92 @@
+<link rel="stylesheet" type="text/css" href="asset/css/layout-club.css">
+
+<div class="content-wrapper">
+    <div class="app-container">
+        <header class="app-header">
+            <h3>Kelab Rekreasi Prokhas </h3>
+        </header>
+        
+        <section class="welcome-section">
+            <h2>Hai <span id="name_display"></span></h2>
+            <p>Welcome to our club! The most important thing is that you have fun!</p>
+            <br>
+            <button style="float: right;" onclick="logout();"><i class="fas fa-sign-out"></i> Logout</button>
+            <br><br>
+        </section>
+         <hr>
+
+        <section class="event-section">
+            <h2>Future Activities</h2>
+            <div class="events">
+                <div class="event">
+                    <h3>14 Fri</h3>
+                    <p>Home match vs Brighton</p>
+                    <p>18:00 - 19:30</p>
+                </div>
+                <div class="event">
+                    <h3>15 Sat</h3>
+                    <p>Home match vs Everton</p>
+                    <p>20:00 - 22:00</p>
+                </div>
+            </div>
+            <a href="#" class="see-all">See all</a>
+        </section>
+         <hr>
+        <section class="staff-section">
+            <h2>Club Staff</h2>
+            <div class="staff-member">
+                <img src="https://via.placeholder.com/40" alt="Thomas Smith">
+                <p>Thomas Smith<br> Chairman</p> 
+            </div>
+            <div class="staff-member">
+                <img src="https://via.placeholder.com/40" alt="Thomas Smith">
+                <p>Thomas Smith<br> Biro Sports</p> 
+            </div>
+            <div class="staff-member">
+                <img src="https://via.placeholder.com/40" alt="Thomas Smith">
+                <p>Thomas Smith<br> Biro Agama</p> 
+            </div>
+        </section>
+         <hr>
+        <section class="timeline-section">
+            <h2>Timeline</h2>
+            <div class="timeline-item">
+                <p>15 Sep: Next Home Match</p>
+            </div>
+            <div class="timeline-item">
+                <p>20 Sep: Training Session</p>
+            </div>
+            <a href="#" class="see-all">See all</a>
+        </section>
+         <hr>
+
+        <section class="stats-section">
+            <h2>Stats 2024</h2>
+            <div class="stat-item red">
+                <h3>50%</h3>
+                <p>Fire Dragon</p>
+            </div>
+            <div class="stat-item blue">
+                <h3>30%</h3>
+                <p>Water Kraken</p>
+            </div>
+            <div class="stat-item yellow">
+                <h3>15%</h3>
+                <p>Griffin</p>
+            </div>
+            <div class="stat-item green">
+                <h3>5%</h3>
+                <p>Cybertooth</p>
+            </div>
+        </section>
+    </div>
+</div>
+
+<footer class="app-footer">
+    <nav class="bottom-nav">
+        <a onclick="webRoute('club-menu');">Home</a>
+        <a onclick="webRoute('club-event');">Events</a>
+        <a onclick="webRoute('club-timeline');">Timeline</a>
+        <a onclick="webRoute('social-home');">Social</a>
+    </nav>
+</footer>

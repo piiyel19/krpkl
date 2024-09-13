@@ -1,0 +1,91 @@
+<link rel="stylesheet" type="text/css" href="asset/css/layout-social.css">
+
+<div class="header">
+    <div id="back_dtls">
+        
+    </div>
+    KRPKL 
+    <div class="notification">
+        <i class="fa fa-exchange" onclick="webRoute('club-menu');"></i> <!-- FontAwesome ellipsis (three dots) icon -->
+    </div>
+</div>
+
+
+<div class="" id="content_posts_dtls">
+    
+</div>
+
+
+
+
+
+
+
+
+
+<!-- Modal Background -->
+<div class="modal-background" id="modalBackground"></div>
+
+<!-- Options Menu -->
+<div class="options-menu" id="optionsMenu">
+    <ul>
+        <li id="editPost"><i class="far fa-edit"></i> Edit Post</li>
+        <li id="deletePost"><i class="fa fa-eraser"></i> Delete</li>
+        <li id="closePost" style="background: #000; color: #fff;">Close</li>
+    </ul>
+</div>
+
+<!-- Fullscreen Modal for Edit Post -->
+<div class="modal-fullscreen" id="editPostModal">
+    <span class="close-modal-button" id="closeModalButton">&times;</span>
+    <h3>Edit Post</h3>
+    <textarea id="content_edit" placeholder="Edit your post here..."></textarea>
+    <div class="form-buttons">
+        <button id="cancelEditButton">Cancel</button>
+        <button id="savePostButton">Save</button>
+    </div>
+</div>
+
+<!-- Confirmation Prompt Modal -->
+<div class="modal-confirmation" id="confirmationModal">
+    <p>Are you sure to delete this post?</p>
+    <div class="confirm-buttons">
+        <button class="cancel-button" id="confirmNoButton">Cancel</button>
+        <button class="yes-button" id="confirmYesButton">Yes</button>
+    </div>
+</div>
+
+
+
+
+
+
+
+<div class="modal" id="whoLikePostModal" >
+    <div style="margin: 20px; padding-bottom: 12px;">
+        <span class="close-modal-button" onclick="close_who_like_post();">&times;</span>
+        <h3>Who like this post</h3>
+
+    </div>
+    <div id="myPostLikes" class="user-list">
+
+    </div>
+</div>
+
+
+<!-- Confirmation Prompt Modal -->
+<div class="modal-confirmation" id="confirmationModal_post">
+    <p>Are you sure to delete ?</p>
+    <div class="confirm-buttons">
+        <input type="hidden" name="id_delete" value="">
+        <input type="hidden" name="id_post" value="">
+        
+        <button class="cancel-button" id="confirmNoButton_post">Cancel</button>
+        <button class="yes-button" id="confirmYesButton_post">Yes</button>
+    </div>
+</div>
+
+
+
+
+<script type="text/javascript" src="asset/js/social-details-post.js"></script>
